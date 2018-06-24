@@ -38,18 +38,18 @@ public class ArtistAdapter extends ArrayAdapter<Artist>{
         View listItemView = convertView;
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item_single, parent, false);
+                    R.layout.list_item, parent, false);
         }
 
         // Get the {@link Song} object located at this position in the list
         Artist currentArtist = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the title text
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.artist_single_view);
+        TextView titleTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
         titleTextView.setText(currentArtist.getName());
 
         // Find the ImageView in the list_item.xml layout with the ID of album art
-        ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_single_icon);
+        ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
         // Get the image resource ID from the current AndroidFlavor object and
         // set the image to iconView
         iconView.setImageResource(currentArtist.getImageResourceId());
