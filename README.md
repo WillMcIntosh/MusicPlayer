@@ -1,5 +1,6 @@
 # MusicPlayer
 
+Images taken from Google Play Music and converted using [Cloud Convert](https://cloudconvert.com/webp-to-png)
 
 ### TODO:
 - [x] find a way to set an intent up on a specific list item added by Java
