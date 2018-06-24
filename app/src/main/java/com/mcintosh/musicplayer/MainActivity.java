@@ -28,5 +28,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(artistIntent);
             }
         });
+
+        // Find the View that shows the albums category
+        TextView albums = (TextView) findViewById(R.id.albums);
+
+        // Set up click listener for Album Activity
+        albums.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the album category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link AlbumActivity}
+                Intent albumIntent = new Intent(MainActivity.this, AlbumActivity.class);
+
+                // Start the new activity
+                startActivity(albumIntent);
+            }
+        });
+
+        // Find the View that shows the library category
+        TextView library = (TextView) findViewById(R.id.library);
+
+        // Set up click listener for Library Activity
+        library.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the library category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link LibraryActivity}
+                Intent libraryIntent = new Intent(MainActivity.this, LibraryActivity.class);
+
+                // Start the new activity
+                startActivity(libraryIntent);
+            }
+        });
     }
 }
