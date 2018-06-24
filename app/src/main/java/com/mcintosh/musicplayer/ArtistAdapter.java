@@ -46,7 +46,7 @@ public class ArtistAdapter extends ArrayAdapter<Artist>{
 
         // Find the TextView in the list_item.xml layout with the title text
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
-        titleTextView.setText(currentArtist.getName());
+        titleTextView.setText(currentArtist.getArtist());
 
         // Find the ImageView in the list_item.xml layout with the ID of album art
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
