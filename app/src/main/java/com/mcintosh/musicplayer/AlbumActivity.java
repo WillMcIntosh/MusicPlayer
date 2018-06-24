@@ -37,7 +37,7 @@ public class AlbumActivity extends AppCompatActivity {
                 Album itemChosen = (Album) parent.getItemAtPosition(position);
 
                 // start Library activity only if Homework is clicked on
-                if (itemChosen.getAlbum() == "Homework") {
+                if (itemChosen.getAlbum().equals("Human After All")) {
                     Intent intent = new Intent(AlbumActivity.this, LibraryActivity.class);
                     startActivity(intent);
                 }

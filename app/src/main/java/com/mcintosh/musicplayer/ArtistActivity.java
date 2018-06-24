@@ -39,7 +39,7 @@ public class ArtistActivity extends AppCompatActivity {
                 Artist itemChosen = (Artist) parent.getItemAtPosition(position);
 
                 // start Albums activity only if Daft Punk is clicked on
-                if (itemChosen.getArtist() == "Daft Punk") {
+                if (itemChosen.getArtist().equals("Daft Punk")) {
                     Intent intent = new Intent(ArtistActivity.this, AlbumActivity.class);
                     startActivity(intent);
                 }
