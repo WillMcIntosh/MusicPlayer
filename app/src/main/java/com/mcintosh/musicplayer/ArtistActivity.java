@@ -2,7 +2,6 @@ package com.mcintosh.musicplayer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Adapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -14,20 +13,15 @@ public class ArtistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_list);
 
-        // Create an array of words for numbers one through ten
-        ArrayList<Song> songs = new ArrayList<>();
+        // Create an array of artists
+        ArrayList<Artist> artists = new ArrayList<>();
 
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
+        artists.add(new Artist("Daft Punk", R.drawable.donut));
+        artists.add(new Artist("deadmau5", R.drawable.donut));
 
-        SongAdapter adapter =
-                new SongAdapter(this, songs);
+
+        ArtistAdapter adapter =
+                new ArtistAdapter(this, artists);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

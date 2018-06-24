@@ -1,20 +1,20 @@
 package com.mcintosh.musicplayer;
 
-import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
+        import android.app.Activity;
+        import android.support.annotation.NonNull;
+        import android.support.annotation.Nullable;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.ArrayAdapter;
+        import android.widget.ImageView;
+        import android.widget.TextView;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
 
-public class SongAdapter extends ArrayAdapter<Song>{
+public class AlbumAdapter extends ArrayAdapter<Album> {
 
-    public SongAdapter(Activity context, ArrayList<Song> words) {
+    public AlbumAdapter(Activity context, ArrayList<Album> words) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
@@ -42,26 +42,21 @@ public class SongAdapter extends ArrayAdapter<Song>{
         }
 
         // Get the {@link Song} object located at this position in the list
-        Song currentSong = getItem(position);
-
-        // Find the TextView in the list_item.xml layout with the title text
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
-        titleTextView.setText(currentSong.getTitle());
+        Album currentAlbum = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the artist
         TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
-        artistTextView.setText(currentSong.getArtist());
+        artistTextView.setText(currentAlbum.getArtist());
 
         // Find the TextView in the list_item.xml layout with the album
         TextView albumTextView = (TextView) listItemView.findViewById(R.id.album_text_view);
-        albumTextView.setText(currentSong.getAlbum());
+        albumTextView.setText(currentAlbum.getAlbum());
 
         // Find the ImageView in the list_item.xml layout with the ID of album art
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
         // Get the image resource ID from the current AndroidFlavor object and
         // set the image to iconView
-        iconView.setImageResource(currentSong.getImageResourceId());
-
+        iconView.setImageResource(currentAlbum.getImageResourceId());
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView

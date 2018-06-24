@@ -6,13 +6,15 @@ package com.mcintosh.musicplayer;
 public class Song {
     private String mTitle;
     private String mArtist;
+    private String mAlbum;
     // Drawable resource ID
     private int mImageResourceId;
 
-    public Song(String title, String artist, int imageResourceId) {
+    public Song(String title, String artist, String album, int imageResourceId) {
         mTitle = title;
         mArtist = artist;
         mImageResourceId = imageResourceId;
+        mAlbum = album;
     }
 
     public String getTitle() {
@@ -21,6 +23,10 @@ public class Song {
 
     public String getArtist() {
         return mArtist;
+    }
+
+    public String getAlbum() {
+        return mAlbum;
     }
 
     public int getImageResourceId() {

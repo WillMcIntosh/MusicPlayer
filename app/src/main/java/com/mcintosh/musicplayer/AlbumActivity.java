@@ -13,20 +13,15 @@ public class AlbumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_list);
 
-        // Create an array of words for numbers one through ten
-        ArrayList<Song> songs = new ArrayList<>();
+        // Create an array of albums
+        ArrayList<Album> albums = new ArrayList<>();
 
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
-        songs.add(new Song("Human After All", "Daft Punk", R.drawable.donut));
+        albums.add(new Album("Daft Punk","Daft Punk", R.drawable.donut));
+        albums.add(new Album("Human After All","Daft Punk", R.drawable.donut));
+        albums.add(new Album("4x4","deadmau5", R.drawable.donut));
 
-        SongAdapter adapter =
-                new SongAdapter(this, songs);
+        AlbumAdapter adapter =
+                new AlbumAdapter(this, albums);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

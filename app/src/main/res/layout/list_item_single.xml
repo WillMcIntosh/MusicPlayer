@@ -9,7 +9,7 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/list_item_icon"
+        android:id="@+id/list_item_single_icon"
         android:layout_width="50dp"
         android:layout_height="50dp"/>
 
@@ -21,22 +21,10 @@
         android:paddingLeft="16dp">
 
         <TextView
-            android:id="@+id/title_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Human After All"/>
-
-        <TextView
-            android:id="@+id/artist_text_view"
+            android:id="@+id/artist_single_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Daft Punk"/>
-
-        <TextView
-            android:id="@+id/album_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Human After All"/>
 
     </LinearLayout>
 
