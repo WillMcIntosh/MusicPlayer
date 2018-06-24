@@ -16,6 +16,8 @@ public class AlbumActivity extends AppCompatActivity {
         // Create an array of albums
         ArrayList<Album> albums = new ArrayList<>();
 
+        albums.add(new Album("Homework","Daft Punk", R.drawable.donut));
+        albums.add(new Album("Discovery","Daft Punk", R.drawable.donut));
         albums.add(new Album("Human After All","Daft Punk", R.drawable.donut));
 
         AlbumAdapter adapter =
