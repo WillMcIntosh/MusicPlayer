@@ -21,8 +21,8 @@ public class ArtistActivity extends AppCompatActivity {
         // Create an array of artists
         ArrayList<Artist> artists = new ArrayList<>();
 
-        artists.add(new Artist("Daft Punk", R.drawable.donut));
-        artists.add(new Artist("deadmau5", R.drawable.donut));
+        artists.add(new Artist("Daft Punk", R.drawable.daft));
+        artists.add(new Artist("deadmau5", R.drawable.deadmau5));
 
 
         ArtistAdapter adapter =
