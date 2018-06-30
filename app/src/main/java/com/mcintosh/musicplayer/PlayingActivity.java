@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -35,11 +36,14 @@ public class PlayingActivity extends AppCompatActivity {
         // create Song object out of passed info
         Song currentSong = new Song(selectedTitle, selectedArtist, selectedAlbum, selectedArtwork);
 
-        // TODO: set values of layout based on Song currentSong
+        // Set values of layout based on Song currentSong
+        TextView currentTitle = findViewById(R.id.info_title);
+        TextView currentArtist = findViewById(R.id.info_artist);
+        ImageView currentAlbumArt = findViewById(R.id.album_art);
 
-
-
-
+        currentTitle.setText(selectedTitle);
+        currentArtist.setText(selectedArtist);
+        currentAlbumArt.setImageResource(selectedArtwork);
 
     }
 }
