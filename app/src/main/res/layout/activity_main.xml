@@ -11,13 +11,13 @@
     <TextView
         android:id="@+id/artists"
         style="@style/CategoryStyle"
-        android:background="@color/category_artists"
+        android:background="@color/colorPrimaryDark"
         android:text="@string/category_artists" />
 
     <TextView
         android:id="@+id/albums"
         style="@style/CategoryStyle"
-        android:background="@color/category_albums"
+        android:background="@color/colorPrimary"
         android:text="@string/category_albums" />
 
     <TextView

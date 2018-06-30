@@ -5,12 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <!-- Background color for app -->
     <color name="grey_background">#59595b</color>
-    <!-- Background color for the artists category -->
-    <color name="category_artists">#FD8E09</color>
-
-    <!-- Background color for the album category -->
-    <color name="category_albums">#379237</color>
-
     <!-- Background color for the library category -->
-    <color name="category_library">#16AFCA</color>
+    <color name="category_library">#5e6dc1</color>
 </resources>

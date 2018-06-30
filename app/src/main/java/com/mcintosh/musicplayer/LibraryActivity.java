@@ -161,7 +161,6 @@ public class LibraryActivity extends AppCompatActivity {
                 Intent intent = new Intent(LibraryActivity.this, PlayingActivity.class);
                 intent.putExtra("TITLE", itemChosen.getTitle());
                 intent.putExtra("ARTIST", itemChosen.getArtist());
-                intent.putExtra("ALBUM", itemChosen.getAlbum());
                 intent.putExtra("ART", itemChosen.getImageResourceId());
 
                 startActivity(intent);

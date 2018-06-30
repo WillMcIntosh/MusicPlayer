@@ -30,8 +30,6 @@ public class ArtistActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-
-
         // set up click listener for list of albums
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

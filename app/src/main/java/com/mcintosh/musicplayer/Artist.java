@@ -17,7 +17,6 @@ public class Artist {
         return mArtist;
     }
 
-
     public int getImageResourceId() {
         return mImageResourceId;
     }
