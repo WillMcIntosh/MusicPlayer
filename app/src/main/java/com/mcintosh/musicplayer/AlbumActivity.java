@@ -37,17 +37,18 @@ public class AlbumActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-        // set up click listener for only the homework album
+        // set up click listener for Albums and send Album title to library
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Album itemChosen = (Album) parent.getItemAtPosition(position);
+                Intent intent = new Intent(AlbumActivity.this, LibraryActivity.class);
+                // send chosen Album title over
+                intent.putExtra("ALBUM", itemChosen.getAlbum());
 
-                // start Library activity only if Homework is clicked on
-                if (itemChosen.getAlbum().equals("Human After All")) {
-                    Intent intent = new Intent(AlbumActivity.this, LibraryActivity.class);
-                    startActivity(intent);
-                }
+                // start Library activity with correct Album title
+                startActivity(intent);
+
             }
         });
 
