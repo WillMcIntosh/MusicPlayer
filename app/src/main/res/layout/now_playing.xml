@@ -9,13 +9,14 @@
     tools:context="com.mcintosh.musicplayer.PlayingActivity">
 
     <ImageView
+        android:id="@+id/album_art"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scaleType="fitXY"
         android:src="@drawable/daft"/>
 
     <TextView
-        android:id="@+id/albums"
+        android:id="@+id/song_info"
         style="@style/CategoryStyle"
         android:background="@color/colorPrimaryDark"
         tools:text="title artist stuff"

@@ -28,20 +28,29 @@
         <activity
             android:name=".AlbumActivity"
             android:label="@string/category_albums"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".ArtistActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".ArtistActivity"/>
         </activity>
         <activity
             android:name=".LibraryActivity"
             android:label="@string/category_library"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".AlbumActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".AlbumActivity"/>
+        </activity>
+        <activity
+            android:name=".PlayingActivity"
+            android:label="Now Playing"
+            android:parentActivityName=".LibraryActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LibraryActivity"/>
         </activity>
 
     </application>

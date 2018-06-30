@@ -1,8 +1,12 @@
 package com.mcintosh.musicplayer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -147,5 +151,21 @@ public class LibraryActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+        // set onclick for songs and send info over to now playing
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Song itemChosen = (Song) parent.getItemAtPosition(position);
+
+                // start Albums activity and pass selected Artist
+                Intent intent = new Intent(LibraryActivity.this, PlayingActivity.class);
+                intent.putExtra("TITLE", itemChosen.getTitle());
+                intent.putExtra("ARTIST", itemChosen.getArtist());
+                intent.putExtra("ALBUM", itemChosen.getAlbum());
+                intent.putExtra("ART", itemChosen.getImageResourceId());
+
+                startActivity(intent);
+            }
+        });
     }
 }
