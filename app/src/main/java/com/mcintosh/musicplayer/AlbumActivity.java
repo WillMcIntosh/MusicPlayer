@@ -3,6 +3,7 @@ package com.mcintosh.musicplayer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -27,8 +28,10 @@ public class AlbumActivity extends AppCompatActivity {
         // get ARTIST selected from Intent on Artists page
         final String selectedArtist = getIntent().getStringExtra("ARTIST");
 
-        // remove all albums not by selected Artist
-        albums.removeIf(a -> !a.getArtist().equals(selectedArtist));
+        // remove all albums not by selected Artist if one is selected
+        if (selectedArtist != null) {
+            albums.removeIf(a -> !a.getArtist().equals(selectedArtist));
+        }
 
         AlbumAdapter adapter =
                 new AlbumAdapter(this, albums);
