@@ -32,17 +32,17 @@ public class ArtistActivity extends AppCompatActivity {
 
 
 
-        // set up click listener for only the first item in the list
+        // set up click listener for list of albums
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Artist itemChosen = (Artist) parent.getItemAtPosition(position);
 
-                // start Albums activity only if Daft Punk is clicked on
-                if (itemChosen.getArtist().equals("Daft Punk")) {
-                    Intent intent = new Intent(ArtistActivity.this, AlbumActivity.class);
-                    startActivity(intent);
-                }
+                // start Albums activity and pass selected Artist
+                Intent intent = new Intent(ArtistActivity.this, AlbumActivity.class);
+                intent.putExtra("ARTIST", itemChosen.getArtist());
+
+                startActivity(intent);
             }
         });
 

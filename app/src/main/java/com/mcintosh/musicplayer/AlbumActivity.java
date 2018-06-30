@@ -22,6 +22,13 @@ public class AlbumActivity extends AppCompatActivity {
         albums.add(new Album("Homework","Daft Punk", R.drawable.homework));
         albums.add(new Album("Discovery","Daft Punk", R.drawable.discovery));
         albums.add(new Album("Human After All","Daft Punk", R.drawable.human));
+        albums.add(new Album("4x4=12", "deadmau5", R.drawable.four));
+
+        // get ARTIST selected from Intent on Artists page
+        final String selectedArtist = getIntent().getStringExtra("ARTIST");
+
+        // remove all albums not by selected Artist
+        albums.removeIf(a -> !a.getArtist().equals(selectedArtist));
 
         AlbumAdapter adapter =
                 new AlbumAdapter(this, albums);
