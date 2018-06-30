@@ -8,25 +8,73 @@
     android:orientation="vertical"
     tools:context="com.mcintosh.musicplayer.PlayingActivity">
 
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:id="@+id/song_info"
+        style="@style/CategoryStyle"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="title"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/info_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="artist"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
     <ImageView
+        android:layout_weight="6"
         android:id="@+id/album_art"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
         android:src="@drawable/daft"/>
 
-    <TextView
-        android:id="@+id/song_info"
-        style="@style/CategoryStyle"
-        android:background="@color/colorPrimaryDark"
-        tools:text="title artist stuff"
-        android:textColor="@android:color/white"/>
 
-    <TextView
-        android:id="@+id/library"
+    <!--Play buttons view is static for now-->
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        android:id="@+id/Play_buttons"
         style="@style/CategoryStyle"
         android:background="@color/colorPrimary"
-        tools:text="play buttons"
-        android:textColor="@android:color/white"/>
+        android:orientation="horizontal"
+        android:textColor="@android:color/white"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_skip_previous_24px"
+            android:background="@color/colorPrimary"
+            android:padding="12dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_play_arrow_24px"
+            android:background="@color/colorPrimary"
+            android:padding="12dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_skip_next_24px"
+            android:background="@color/colorPrimary"
+            android:padding="12dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
