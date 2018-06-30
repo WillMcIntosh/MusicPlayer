@@ -4,26 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
+    android:background="@color/grey_background"
     android:orientation="vertical"
     tools:context="com.mcintosh.musicplayer.PlayingActivity">
 
-    <TextView
-        android:id="@+id/artists"
-        style="@style/CategoryStyle"
-        android:background="@color/category_artists"
-        android:text="@string/category_artists" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/daft"/>
 
     <TextView
         android:id="@+id/albums"
         style="@style/CategoryStyle"
-        android:background="@color/category_albums"
-        android:text="@string/category_albums" />
+        android:background="@color/colorPrimaryDark"
+        tools:text="title artist stuff"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/library"
         style="@style/CategoryStyle"
-        android:background="@color/category_library"
-        android:text="@string/category_library" />
+        android:background="@color/colorPrimary"
+        tools:text="play buttons"
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>
